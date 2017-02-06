@@ -1,0 +1,1 @@
+<? $arResult['AJAX_ID'] = CH2oAjax::getComponentID($this->__component); ?>
