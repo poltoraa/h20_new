@@ -372,11 +372,39 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                             ); ?>
                             <? /*Левое меню*/ ?>
 
+
+                            <?$APPLICATION->IncludeComponent(
+                                "bitrix:main.include",
+                                ".default",
+                                Array(
+                                    "AREA_FILE_SHOW" => "file",
+                                    "AREA_FILE_SUFFIX" => "inc",
+                                    "COMPONENT_TEMPLATE" => ".default",
+                                    "COMPOSITE_FRAME_MODE" => "A",
+                                    "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                    "EDIT_TEMPLATE" => "",
+                                    "PATH" => "/includes/left_inc_podmenu.php"
+                                )
+                            );?>
+
                             <div class="mb-hide tablet-hide" style="margin-left: 10px;">
                                 <div class="col col-mb-12 ">
                                     <a href="/bank-resume/" class="bank-resume"></a>
                                 </div>
 
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "COMPOSITE_FRAME_MODE" => "A",
+                                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/includes/left_inc_bank.php"
+                                    )
+                                );?>
 
                                 <? $APPLICATION->IncludeComponent(
                                     "bitrix:news.list",
@@ -444,9 +472,37 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                     false
                                 ); ?>
 
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "COMPOSITE_FRAME_MODE" => "A",
+                                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/includes/left_inc_vacancies.php"
+                                    )
+                                );?>
+
                                 <div class="col col-mb-12">
                                     <a href="/gallery/" class="galery"></a>
                                 </div>
+
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "COMPOSITE_FRAME_MODE" => "A",
+                                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/includes/left_inc_gallery.php"
+                                    )
+                                );?>
 
                                 <? $APPLICATION->IncludeComponent(
                                     "bitrix:voting.current",
@@ -467,8 +523,24 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                     false
                                 ); ?>
 
-                                <div class="col col-mb-12">
-                                    <div class="vk" style="margin-top: 30px;">
+                                <div>
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "COMPOSITE_FRAME_MODE" => "A",
+                                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/includes/left_inc_voiting.php"
+                                        )
+                                    );?>
+                                </div>
+
+                                <div class="col col-mb-12"> 
+                                    <div class="vk" style="margin: 30px 0">
                                         <script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
 
                                         <!-- VK Widget -->
@@ -481,6 +553,15 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                         </script>
                                     </div>
                                 </div>
+
+                                <div>
+                                    <? $APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+                                        Array("AREA_FILE_SHOW" => "file",
+                                            "PATH" => "/includes/left_inc.php",
+                                            "EDIT_TEMPLATE" => ""));
+                                    ?>
+                                </div>
+
                             </div>
 
                         </div>
@@ -546,10 +627,39 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                 ); ?>
                                 <? /*Левое меню*/ ?>
 
+
+                                <?$APPLICATION->IncludeComponent(
+                                    "bitrix:main.include",
+                                    ".default",
+                                    Array(
+                                        "AREA_FILE_SHOW" => "file",
+                                        "AREA_FILE_SUFFIX" => "inc",
+                                        "COMPONENT_TEMPLATE" => ".default",
+                                        "COMPOSITE_FRAME_MODE" => "A",
+                                        "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                        "EDIT_TEMPLATE" => "",
+                                        "PATH" => "/includes/left_inc_podmenu.php"
+                                    )
+                                );?>
+
                                 <div class="mb-hide tablet-hide" style="margin-left: 10px;">
                                     <div class="col col-mb-12 ">
-                                        <a href="/bank-resume/" target="_blank" class="bank-resume"></a>
+                                        <a href="/bank-resume/" class="bank-resume"></a>
                                     </div>
+
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "COMPOSITE_FRAME_MODE" => "A",
+                                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/includes/left_inc_bank.php"
+                                        )
+                                    );?>
 
                                     <? $APPLICATION->IncludeComponent(
                                         "bitrix:news.list",
@@ -617,9 +727,37 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                         false
                                     ); ?>
 
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "COMPOSITE_FRAME_MODE" => "A",
+                                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/includes/left_inc_vacancies.php"
+                                        )
+                                    );?>
+
                                     <div class="col col-mb-12">
                                         <a href="/gallery/" class="galery"></a>
                                     </div>
+
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "COMPOSITE_FRAME_MODE" => "A",
+                                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/includes/left_inc_gallery.php"
+                                        )
+                                    );?>
 
                                     <? $APPLICATION->IncludeComponent(
                                         "bitrix:voting.current",
@@ -640,6 +778,20 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                         false
                                     ); ?>
 
+                                    <?$APPLICATION->IncludeComponent(
+                                        "bitrix:main.include",
+                                        ".default",
+                                        Array(
+                                            "AREA_FILE_SHOW" => "file",
+                                            "AREA_FILE_SUFFIX" => "inc",
+                                            "COMPONENT_TEMPLATE" => ".default",
+                                            "COMPOSITE_FRAME_MODE" => "A",
+                                            "COMPOSITE_FRAME_TYPE" => "AUTO",
+                                            "EDIT_TEMPLATE" => "",
+                                            "PATH" => "/includes/left_inc_voiting.php"
+                                        )
+                                    );?>
+
                                     <div class="col col-mb-12">
                                         <div class="vk" style="margin-top: 30px;">
                                             <script type="text/javascript"
@@ -656,6 +808,14 @@ if (!IsModuleInstalled("bitrix.gossite")) {
                                         </div>
                                     </div>
 
+                                    <div>
+                                        <? $APPLICATION->IncludeComponent("bitrix:main.include", ".default",
+                                            Array("AREA_FILE_SHOW" => "file",
+                                                "PATH" => "/includes/left_inc.php",
+                                                "EDIT_TEMPLATE" => ""));
+                                        ?>
+                                    </div>
+                                    
                                 </div>
 
                             </div>
